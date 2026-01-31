@@ -98,6 +98,10 @@
                   clinic materials, and co-develop responsible computing practices, toolkits, and
                   case studies that can travel across campuses.
                 </p>
+                <p class="small">
+                  You are also invited to observe or participate in Public Futures Review Board
+                  sessions.
+                </p>
               </article>
             </div>
             <div class="cta-row">
@@ -198,6 +202,94 @@
           </div>
         </section>
 
+        <section class="section section-divider" id="guest-experts">
+          <div class="container">
+            <h2>Guest Experts</h2>
+            <p>
+              We invite guest experts in accountability, repair, safeguards, or refusal to critique
+              and speculate with our students.
+            </p>
+            <div class="cards">
+              <article class="card">
+                <h3>Expert Name</h3>
+                <p class="small">Affiliation · Focus area</p>
+                <p>
+                  Placeholder description of the expert’s perspective and how they support
+                  clinic teams.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Expert Name</h3>
+                <p class="small">Affiliation · Focus area</p>
+                <p>
+                  Placeholder description of the expert’s perspective and how they support
+                  clinic teams.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Expert Name</h3>
+                <p class="small">Affiliation · Focus area</p>
+                <p>
+                  Placeholder description of the expert’s perspective and how they support
+                  clinic teams.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--
+        <section class="section" id="projects">
+          <div class="container">
+            <div class="carousel-header">
+              <h2>Current Projects</h2>
+              <div class="carousel-controls">
+                <button class="carousel-button" type="button" data-carousel="prev">Prev</button>
+                <button class="carousel-button" type="button" data-carousel="next">Next</button>
+              </div>
+            </div>
+            <div class="carousel" data-carousel-track>
+              <article class="carousel-card">
+                <p class="carousel-tag">Project 01 · Partner type</p>
+                <h3>Project Title 01</h3>
+                <p>
+                  Short description of the project focus, partner need, and the accountable
+                  outcome being pursued.
+                </p>
+                <p class="small">Status: Term · Year</p>
+              </article>
+              <article class="carousel-card">
+                <p class="carousel-tag">Project 02 · Partner type</p>
+                <h3>Project Title 02</h3>
+                <p>
+                  Short description of the project focus, partner need, and the accountable
+                  outcome being pursued.
+                </p>
+                <p class="small">Status: Term · Year</p>
+              </article>
+              <article class="carousel-card">
+                <p class="carousel-tag">Project 03 · Partner type</p>
+                <h3>Project Title 03</h3>
+                <p>
+                  Short description of the project focus, partner need, and the accountable
+                  outcome being pursued.
+                </p>
+                <p class="small">Status: Term · Year</p>
+              </article>
+            </div>
+          </div>
+
+          <template id="project-card-template">
+            <article class="carousel-card">
+              <p class="carousel-tag">Project 00 · Partner type</p>
+              <h3>Project Title 00</h3>
+              <p>Short description of the project focus and accountable outcome.</p>
+              <p class="small">Status: Term · Year</p>
+            </article>
+          </template>
+        </section>
+        -->
+
         <section class="section section-divider" id="team">
           <div class="container grid-2">
             <div>
@@ -244,5 +336,27 @@
         </div>
       </footer>
     </div>
+    <!--
+    <script>
+      window.addEventListener("load", () => {
+        const track = document.querySelector("[data-carousel-track]");
+        const prev = document.querySelector("[data-carousel='prev']");
+        const next = document.querySelector("[data-carousel='next']");
+
+        const scrollByCard = (direction) => {
+          if (!track) return;
+          const card = track.querySelector(".carousel-card");
+          if (!card) return;
+          const styles = getComputedStyle(track);
+          const gap = parseFloat(styles.columnGap || styles.gap || 16);
+          const amount = card.offsetWidth + gap;
+          track.scrollBy({ left: direction * amount, behavior: "smooth" });
+        };
+
+        prev?.addEventListener("click", () => scrollByCard(-1));
+        next?.addEventListener("click", () => scrollByCard(1));
+      });
+    </script>
+    -->
   </body>
 </html>
