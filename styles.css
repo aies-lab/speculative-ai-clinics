@@ -230,6 +230,21 @@ p {
   box-shadow: none;
 }
 
+.profile-card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f2f0ea;
+}
+
 ol,
 ul {
   padding-left: 1.25rem;
