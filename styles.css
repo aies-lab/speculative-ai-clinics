@@ -384,6 +384,17 @@ li {
   margin-bottom: 0.4rem;
 }
 
+.highlight-note {
+  display: inline-block;
+  background: #fff4d4;
+  color: #3c2e10;
+  border: 1px solid #f0d48a;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .site-footer {
   padding: 2.5rem 0 3rem;
   margin-top: auto;
