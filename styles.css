@@ -68,6 +68,44 @@ p {
   gap: 1.25rem;
 }
 
+.resources-strip {
+  padding: 1.5rem 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+.resources-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+
+.resources-label {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.resource-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.resource-nav a {
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.1rem;
+}
+
+.resource-nav a:hover,
+.resource-nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -86,20 +124,58 @@ p {
 .meta-row {
   margin-top: 1rem;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.75rem 1.25rem;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.meta-row span {
+.meta-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+}
+
+.meta-details span {
   padding-right: 1.25rem;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.meta-row span:last-child {
+.meta-details span:last-child {
   padding-right: 0;
   border-right: none;
+}
+
+.meta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
+.meta-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.1rem;
+}
+
+.meta-links a:hover,
+.meta-links a:focus-visible {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-links a.is-active {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.7);
+}
+
+.tab-hidden {
+  display: none;
 }
 .callout {
   background: #ffffff;
@@ -363,8 +439,16 @@ li {
     padding: 3.5rem 0 3rem;
   }
 
+  .resources-strip {
+    padding: 1.25rem 0;
+  }
+
   .tagline {
     font-size: 1.1rem;
+  }
+
+  .meta-row {
+    align-items: flex-start;
   }
 
   .panel,

@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,9 +29,16 @@
               Student-led clinics for accountability, repair, safeguards, or refusal.
             </p>
             <div class="meta-row">
-              <span>Register: INFO 494</span>
-              <span>Credits: 3 per term</span>
-              <span>Format: seminar + studio/clinic lab</span>
+              <div class="meta-details">
+                <span>Register: INFO 494</span>
+                <span>Credits: 3 per term</span>
+                <span>Format: seminar + studio/clinic lab</span>
+              </div>
+              <nav class="meta-links" aria-label="Resources">
+                <a href="#overview" data-tab="overview">Overview</a>
+                <a href="#curriculum" data-tab="curriculum">Curriculum</a>
+                <a href="#case-studies" data-tab="case-studies">Case Library</a>
+              </nav>
             </div>
           </div>
         </div>
@@ -202,6 +211,9 @@
           </div>
         </section>
 
+        {% include curriculum.html %}
+        {% include case_library.html %}
+
         <section class="section section-divider" id="guest-experts">
           <div class="container">
             <h2>Guest Experts</h2>
@@ -368,5 +380,36 @@
       });
     </script>
     -->
+    <script>
+      const tabLinks = document.querySelectorAll("[data-tab]");
+      const sections = document.querySelectorAll("main > section[id]");
+      const tabbedIds = new Set(["curriculum", "case-studies"]);
+
+      const setTab = (tab) => {
+        if (tab === "overview") {
+          sections.forEach((section) => {
+            section.classList.toggle("tab-hidden", tabbedIds.has(section.id));
+          });
+        } else {
+          sections.forEach((section) => {
+            section.classList.toggle("tab-hidden", section.id !== tab);
+          });
+        }
+        tabLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.dataset.tab === tab);
+        });
+      };
+
+      tabLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const tab = link.dataset.tab;
+          if (!tab) return;
+          event.preventDefault();
+          setTab(tab);
+        });
+      });
+
+      setTab("overview");
+    </script>
   </body>
 </html>
